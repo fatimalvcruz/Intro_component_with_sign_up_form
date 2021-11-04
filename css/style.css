@@ -1,0 +1,166 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  font-family: Poppins;
+  font-size: 16px;
+  background-color: #ff7a7a;
+  background-image: url(/img/bg-intro-mobile.png);
+}
+
+.container {
+  min-width: 325px;
+  width: 87%;
+  margin: 0 auto;
+  top: 95px;
+  position: relative;
+}
+
+.header {
+  color: white;
+  width: 94%;
+  margin: 0 auto;
+}
+.header h1 {
+  width: 58%;
+  margin: 0 auto;
+  margin-bottom: 18px;
+  font-weight: 700;
+  line-height: 26px;
+  font-size: 20px;
+}
+.header p {
+  margin-bottom: 37px;
+  font-weight: 400;
+  line-height: 26px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.sub-header {
+  background-color: #6055a5;
+  width: 87%;
+  margin: 0 auto;
+  color: white;
+  border-radius: 10px;
+  margin-bottom: 13px;
+  box-shadow: 0 10px 0 0 rgba(95, 95, 95, 0.3);
+  cursor: pointer;
+}
+.sub-header h2 {
+  width: 63%;
+  margin: 0 auto;
+  font-weight: 600;
+  line-height: 22px;
+  text-align: center;
+  padding: 20px 0;
+  margin-bottom: 18px;
+}
+
+.card {
+  background-color: white;
+  width: 87%;
+  margin: 0 auto;
+  box-shadow: 0 10px 0 0 rgba(95, 95, 95, 0.3);
+  border-radius: 5px;
+}
+.card form {
+  width: 77%;
+  margin: 0 auto;
+  padding-top: 26px;
+}
+.card form input {
+  width: 100%;
+  border-radius: 5px;
+  height: 55px;
+  margin-bottom: 17px;
+  margin-top: 25px;
+  border-color: #b9b6d3;
+  background-color: white;
+  outline: 0 none;
+}
+.card form ::placeholder {
+  color: #b9b6d3;
+  font-weight: 600;
+  padding-left: 20px;
+}
+.card form .btn-form {
+  width: 100%;
+  border-radius: 5px;
+  height: 55px;
+  margin-bottom: 17px;
+  margin-top: 25px;
+  border-color: #38cc8c;
+  background-color: #38cc8c;
+  outline: 0 none;
+  color: white;
+  font-weight: 600;
+  box-shadow: 0 5px 0 0 rgba(95, 95, 95, 0.3);
+  cursor: pointer;
+}
+.card .footer {
+  width: 70%;
+  margin: 0 auto;
+  font-weight: 400;
+  font-size: 10px;
+  text-align: center;
+  color: #b9b6d3;
+  line-height: 18px;
+  padding-bottom: 15px;
+}
+.card .footer span {
+  color: #ff7a7a;
+}
+
+/*# sourceMappingURL=style.css.map */
