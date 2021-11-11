@@ -1,0 +1,97 @@
+
+
+   $font-1:400;
+   $font-2:500;
+   $font-3:600;
+   $font-4:700;
+   
+   
+   $red:hsl(0, 100%, 74%);
+   $green:hsl(154, 59%, 51%);
+   $blue:hsl(248, 32%, 49%);
+   $dark-blue: hsl(249, 10%, 26%); 
+   $Grayish-blue:hsl(246, 25%, 77%); 
+   
+
+
+@media all and (min-width: 1024px){
+    
+ 
+    body{
+      
+     
+        background-image: url(/img/bg-intro-desktop.png);
+   
+     
+    .container{
+
+        width: 80%;
+        min-width: 812px; 
+        grid-gap: 10px; 
+        grid-template-columns: 1fr 1.4fr;
+        grid-template-rows:100px 100px;
+        position: relative;
+
+            .header{
+                
+                    width: 35%;
+                    min-width: 282px;
+                    float: left;
+                    left: 95px;
+                    position: relative;
+            
+            
+                    h1{
+                        width: 233px;
+                        height: 55px;
+                        font-size: 24px;
+                        text-align: left;
+                        line-height: 30px;
+                        margin: 170px 485px 20px 0;
+              
+                    }
+                    p{
+                        width: 100%;
+                        text-align: left;
+                        height: 100%;
+                        font-weight: $font-1;
+                        margin: 0 400px 0  0;
+              
+                    }
+
+                }
+            .sub-header{
+                    width: 37%;
+                    min-width: 305px;
+                    float: right;
+                    height: 75px;
+                    padding-bottom:12px ;
+                    position: relative;
+                    right: 95px;
+            
+                }
+            .card{
+                width: 37%;
+                    min-width: 305px;
+                float: right;
+                position: relative;
+                right: 95px;
+               
+
+                    form{
+                        width:85% ;
+                    }
+                    .btn-form{
+                        width:85% ;
+                    }
+                    .footer{
+                        width: 210px;
+
+                    }
+            }
+
+
+            }
+            
+}
+}

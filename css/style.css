@@ -52,7 +52,67 @@ table {
   border-spacing: 0;
 }
 
-body {
+@media all and (min-width: 1024px) {
+  body {
+    background-image: url(/img/bg-intro-desktop.png);
+  }
+  body .container {
+    width: 80%;
+    min-width: 812px;
+    grid-gap: 10px;
+    grid-template-columns: 1fr 1.4fr;
+    grid-template-rows: 100px 100px;
+    position: relative;
+  }
+  body .container .header {
+    width: 35%;
+    min-width: 282px;
+    float: left;
+    left: 95px;
+    position: relative;
+  }
+  body .container .header h1 {
+    width: 233px;
+    height: 55px;
+    font-size: 24px;
+    text-align: left;
+    line-height: 30px;
+    margin: 170px 485px 20px 0;
+  }
+  body .container .header p {
+    width: 100%;
+    text-align: left;
+    height: 100%;
+    font-weight: 400;
+    margin: 0 400px 0 0;
+  }
+  body .container .sub-header {
+    width: 37%;
+    min-width: 305px;
+    float: right;
+    height: 75px;
+    padding-bottom: 12px;
+    position: relative;
+    right: 95px;
+  }
+  body .container .card {
+    width: 37%;
+    min-width: 305px;
+    float: right;
+    position: relative;
+    right: 95px;
+  }
+  body .container .card form {
+    width: 85%;
+  }
+  body .container .card .btn-form {
+    width: 85%;
+  }
+  body .container .card .footer {
+    width: 210px;
+  }
+}
+* body {
   font-family: Poppins;
   font-size: 16px;
   background-color: #ff7a7a;
@@ -60,19 +120,18 @@ body {
 }
 
 .container {
-  min-width: 325px;
   width: 87%;
+  min-width: 330px;
   margin: 0 auto;
   top: 95px;
   position: relative;
 }
-
-.header {
+.container .header {
   color: white;
   width: 94%;
   margin: 0 auto;
 }
-.header h1 {
+.container .header h1 {
   width: 58%;
   margin: 0 auto;
   margin-bottom: 18px;
@@ -81,15 +140,13 @@ body {
   font-size: 20px;
   text-align: center;
 }
-.header p {
+.container .header p {
   margin-bottom: 37px;
   font-weight: 400;
   line-height: 26px;
   text-align: center;
-  margin-bottom: 30px;
 }
-
-.sub-header {
+.container .sub-header {
   background-color: #6055a5;
   width: 87%;
   margin: 0 auto;
@@ -99,7 +156,7 @@ body {
   box-shadow: 0 10px 0 0 rgba(95, 95, 95, 0.3);
   cursor: pointer;
 }
-.sub-header h2 {
+.container .sub-header h2 {
   width: 63%;
   margin: 0 auto;
   font-weight: 600;
@@ -108,8 +165,7 @@ body {
   padding: 20px 0;
   margin-bottom: 18px;
 }
-
-.card {
+.container .card {
   background-color: white;
   width: 87%;
   height: auto;
@@ -118,12 +174,12 @@ body {
   border-radius: 5px;
   position: relative;
 }
-.card form {
+.container .card form {
   width: 77%;
   margin: 0 auto;
   padding-top: 26px;
 }
-.card form input {
+.container .card form input {
   width: 100%;
   border-radius: 5px;
   height: 70px;
@@ -133,17 +189,17 @@ body {
   background-color: none;
   outline: 0 none;
 }
-.card form input::placeholder {
+.container .card form input::placeholder {
   color: #b9b6d3;
   font-weight: 600;
 }
-.card form input.active::placeholder {
+.container .card form input.active::placeholder {
   background-image: url(/img/icon-error.svg);
   background-repeat: no-repeat;
   background-position-x: 95%;
   height: 100%;
 }
-.card form .alert-name {
+.container .card form .alert-name {
   color: #ff7a7a;
   font-weight: 400;
   text-align: right;
@@ -151,7 +207,7 @@ body {
   float: right;
   visibility: hidden;
 }
-.card form .alert-last {
+.container .card form .alert-last {
   color: #ff7a7a;
   font-weight: 400;
   text-align: right;
@@ -159,7 +215,7 @@ body {
   float: right;
   visibility: hidden;
 }
-.card form .alert-mail {
+.container .card form .alert-mail {
   color: #ff7a7a;
   font-weight: 400;
   text-align: right;
@@ -167,7 +223,7 @@ body {
   float: right;
   visibility: hidden;
 }
-.card form .alert-pass {
+.container .card form .alert-pass {
   color: #ff7a7a;
   font-weight: 400;
   text-align: right;
@@ -175,7 +231,7 @@ body {
   float: right;
   visibility: hidden;
 }
-.card form .btn-form {
+.container .card form .btn-form {
   width: 100%;
   border-radius: 5px;
   height: 70px;
@@ -189,7 +245,7 @@ body {
   box-shadow: 0 5px 0 0 rgba(95, 95, 95, 0.3);
   cursor: pointer;
 }
-.card .footer {
+.container .card .footer {
   width: 70%;
   margin: 0 auto;
   font-weight: 400;
@@ -199,39 +255,13 @@ body {
   line-height: 18px;
   padding-bottom: 15px;
 }
-.card .footer span {
+.container .card .footer span {
   color: #ff7a7a;
 }
-
-input:focus {
+.container .card input:focus {
   color: #3e3c49;
   font-weight: 600;
   padding-left: 20px;
 }
-
-/* 
-:active label{
-    @include box-form($red, none);
-    display: inline-block;
-        ::placeholder{
-            color:$Grayish-blue;
-            background-image: url(/img/icon-error.svg);
-            background-repeat: no-repeat;      
-
-} */
-/* 
-
-
-
-input:invalid{
-    @include box-form($red, none);
-
-    ::placeholder{
-        color:$Grayish-blue;
-        background-image: url(/img/icon-error.svg);
-        background-repeat: no-repeat;      
-    }
-
-} */
 
 /*# sourceMappingURL=style.css.map */
