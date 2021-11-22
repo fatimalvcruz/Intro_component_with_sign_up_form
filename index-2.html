@@ -1,0 +1,96 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Desconocido </title></head><body>
+<h1 id="frontend-mentor-intro-component-with-sign-up-form-solution">Frontend Mentor - Intro component with sign up form solution</h1>
+<p>This is a solution to the <a href="https://www.frontendmentor.io/challenges/intro-component-with-signup-form-5cf91bd49edda32581d28fd1">Intro component with sign up form challenge on Frontend Mentor</a>. Frontend Mentor challenges help you improve your coding skills by building realistic projects. </p>
+<h2 id="table-of-contents">Table of contents</h2>
+<ul>
+<li><a href="#overview">Overview</a></li>
+<li><a href="#the-challenge">The challenge</a></li>
+<li><a href="#screenshot">Screenshot</a></li>
+<li><a href="#links">Links</a></li>
+<li><a href="#my-process">My process</a></li>
+<li><a href="#built-with">Built with</a></li>
+<li><a href="#what-i-learned">What I learned</a></li>
+</ul>
+<h2 id="overview">Overview</h2>
+<h3 id="the-challenge">The challenge</h3>
+<p>Users should be able to:</p>
+<ul>
+<li>View the optimal layout for the site depending on their device's screen size</li>
+<li>See hover states for all interactive elements on the page</li>
+<li>Receive an error message when the <code>form</code> is submitted if:</li>
+<li>Any <code>input</code> field is empty. The message for this error should say <em>"[Field Name] cannot be empty"</em></li>
+<li>The email address is not formatted correctly (i.e. a correct email address should have this structure: <code>name@host.tld</code>). The message for this error should say <em>"Looks like this is not an email"</em></li>
+</ul>
+<h3 id="screenshot">Screenshot</h3>
+<p><img alt="" src="/img/screen_shot.jpg" /></p>
+<h3 id="links">Links</h3>
+<ul>
+<li>Solution URL: <a href="fatimalvcruz/Intro_component_with_sign_up_form">Github</a></li>
+<li>Live Site URL: <a href="https://intro-component-wiht-sing-up-form-challenge.netlify.app/">Netlify</a></li>
+</ul>
+<h2 id="my-process">My process</h2>
+<h3 id="built-with">Built with</h3>
+<ul>
+<li>Semantic HTML5 markup</li>
+<li>CSS custom properties</li>
+<li>CSS Grid</li>
+<li>Mobile-first workflow</li>
+<li>SASS</li>
+<li>Native JavaScript</li>
+</ul>
+<h3 id="what-i-learned">What I learned</h3>
+<p>In this project I learned how to use SASS to design, using variables for font colours and weight, I also used the blend property to group properties to be used in different elements.</p>
+<p>To see how you can add code snippets, see below:</p>
+<p>```Css Sass</p>
+<p>@import 'medias';</p>
+<p>$font-1:400;
+$font-2:500;
+$font-3:600;
+$font-4:700;</p>
+<p>$red:hsl(0, 100%, 74%);
+$green:hsl(154, 59%, 51%);
+$blue:hsl(248, 32%, 49%);
+$dark-blue: hsl(249, 10%, 26%); 
+$Grayish-blue:hsl(246, 25%, 77%); *</p>
+<p>```</p>
+<p>The challenge has two different views, mobile and desktop, and the elemnents are distributed in different ways, I used display grid to create 2 columns in desktop view. </p>
+<p>```css
+    .container{</p>
+<pre><code>    width: 80%;
+    min-width: 812px; 
+    grid-gap: 10px; 
+    grid-template-columns: 1fr 1.4fr;
+    grid-template-rows:100px 100px;
+    position: relative;
+</code></pre>
+<p>}
+```
+To add the image to the empty input I added the image to the placeholder.</p>
+<p>```css
+      &amp;.active{
+                            &amp;::placeholder{
+                                background-image: url(/img/icon-error.svg);
+                                background-repeat: no-repeat; <br />
+                                background-position-x: 95%; 
+                                height: 100%;  </p>
+<pre><code>                        }
+</code></pre>
+<p><code>To validate the form I used Javascript, creating an addEventListener event when submit is done. Then I added a series of conditionals with the different regular expressions adapted to each field.</code>js</p>
+<p>form.addEventListener("submit", (e) =&gt; {
+    e.preventDefault();</p>
+<pre><code>const regUserName = /^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$/;
+const regUserEmail = /^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$/;
+const regPassword = /(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$"/;
+
+    const errores = [];
+
+    if (!regUserName.test(forName.value)) {
+        errores.push({
+            input: forName,
+            tipo: alertName,
+            msg: "First Name cannot be empty"
+        })
+</code></pre>
+<p>}
+```</p>
+</body></html>
